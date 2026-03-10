@@ -47,14 +47,14 @@ export default function Navbar() {
           aria-label="TechnoVera Home"
         >
           <img
-            src="/logo1.jpg"
+            src={logo1}
             alt="TechnoVera Icon"
             className="nav-logo-img"
             style={{ width: "40px", height: "40px", marginRight: "10px" }}
             loading="eager"
           />
           <img
-            src="/TechLogo2.jpg"
+            src={techLogo}
             alt="TechnoVera - IT Services Company Logo"
             className="nav-logo-text-img"
             style={{ width: "auto", height: "30px", maxWidth: "180px" }}
