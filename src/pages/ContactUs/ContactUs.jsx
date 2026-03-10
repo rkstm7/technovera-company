@@ -1,6 +1,5 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import SEO from "@/components/SEO/SEO";
 import "./ContactUs.css";
 import {
   MapPin,
@@ -281,28 +280,7 @@ export default function ContactUs() {
         </div>
 
         {/* GOOGLE MAP */}
-        <motion.div
-          className="map-section"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <div className="map-header">
-            <h2 className="map-title">Find Us Here</h2>
-            <p className="map-description">
-              Visit our office or drop by for a coffee
-            </p>
-          </div>
-          <div className="map-wrapper">
-            <iframe
-              title="TechnoVera Location"
-              src="googlemap.com"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </motion.div>
+
       </div>
     </>
   );

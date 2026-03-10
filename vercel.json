@@ -32,6 +32,26 @@
       "dest": "/favicon.jpg"
     },
     {
+      "src": "/manifest.json",
+      "dest": "/manifest.json"
+    },
+    {
+      "src": "/og-image.jpg",
+      "dest": "/og-image.jpg"
+    },
+    {
+      "src": "/logo.jpg",
+      "dest": "/logo.jpg"
+    },
+    {
+      "src": "/logo1.jpg",
+      "dest": "/logo1.jpg"
+    },
+    {
+      "src": "/.well-known/security.txt",
+      "dest": "/.well-known/security.txt"
+    },
+    {
       "src": "/assets/(.*)",
       "dest": "/assets/$1"
     },
@@ -104,6 +124,15 @@
     },
     {
       "source": "/(.*).webp",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*).ico",
       "headers": [
         {
           "key": "Cache-Control",
