@@ -196,7 +196,7 @@ export default function Portfolio() {
         title="Portfolio - Our Projects"
         description="Showcasing our best work and successful projects. Explore modern websites, mobile applications, and custom software solutions built by TechnoVera."
         keywords="portfolio, web projects, mobile apps, case studies, client work, website development, app development"
-        url="https://www.technovera.com/portfolio"
+        url="https://www.technoveraservices.com/portfolio"
         structuredData={structuredData}
       />
       <main className="portfolio-page">

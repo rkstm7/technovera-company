@@ -113,7 +113,7 @@ export default function ITSolutions() {
     provider: {
       "@type": "Organization",
       name: "TechnoVera Solutions",
-      url: "https://www.technovera.com",
+      url: "https://www.technoveraservices.com",
     },
     areaServed: "IN",
     hasOfferCatalog: {
@@ -137,7 +137,7 @@ export default function ITSolutions() {
         title="IT Solutions & Services"
         description="Innovative IT solutions designed for growth. TechnoVera delivers powerful, scalable, and future-ready IT solutions including web development, software development, cloud solutions, and digital transformation."
         keywords="IT solutions, IT services, web development services, software development, cloud solutions, digital transformation, enterprise IT, business technology"
-        url="https://www.technovera.com/services"
+        url="https://www.technoveraservices.com/services"
         structuredData={structuredData}
       />
       <section className="its-section">

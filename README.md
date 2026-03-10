@@ -88,9 +88,9 @@ frontend/
 Create `.env.production`:
 
 ```env
-VITE_BACKEND_URL=https://api.technovera.com
+VITE_BACKEND_URL=https://api.technoveraservices.com
 VITE_APP_NAME=TechnoVera Solutions
-VITE_CONTACT_EMAIL=info@technovera.com
+VITE_CONTACT_EMAIL=info@technoveraservices.com
 ```
 
 ### Build Optimization
@@ -161,9 +161,9 @@ Proprietary - TechnoVera Solutions
 
 ## 📞 Support
 
-- Email: info@technovera.com
+- Email: info@technoveraservices.com
 - Phone: +91-8208385551
-- Website: https://www.technovera.com
+- Website: https://www.technoveraservices.com
 
 ---
 

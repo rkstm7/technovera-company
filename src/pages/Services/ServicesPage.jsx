@@ -43,7 +43,7 @@ export default function ServicesPage() {
         title="Services - IT Solutions & Services"
         description="Comprehensive IT solutions tailored to your business needs. Explore our web development, software development, mobile apps, CRM systems, and digital transformation services."
         keywords="IT services, web development services, software development, mobile app development, CRM solutions, digital transformation, enterprise solutions"
-        url="https://www.technovera.com/services"
+        url="https://www.technoveraservices.com/services"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gray-50 py-20">

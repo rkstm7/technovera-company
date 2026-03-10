@@ -9,7 +9,7 @@ Disallow: /login
 Disallow: /dashboard
 
 # Sitemap location
-Sitemap: https://www.technovera.com/sitemap.xml
+Sitemap: https://www.technoveraservices.com/sitemap.xml
 
 # Crawl-delay (optional, helps prevent server overload)
 Crawl-delay: 1

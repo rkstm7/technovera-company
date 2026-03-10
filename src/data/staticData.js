@@ -859,7 +859,7 @@ export const staticData = {
       linkedin: "https://www.linkedin.com/in/vishalnair",
       twitter: "https://twitter.com/vishalnair",
       instagram: "https://www.instagram.com/vishalnair",
-      email: "vishal@technovera.com",
+      email: "vishal@technoveraservices.com",
       isActive: true
     },
     {
@@ -871,7 +871,7 @@ export const staticData = {
       linkedin: "https://www.linkedin.com/in/rohitsingh",
       twitter: "https://twitter.com/rohitsingh",
       instagram: "https://www.instagram.com/rohitsingh",
-      email: "rohit@technovera.com",
+      email: "rohit@technoveraservices.com",
       isActive: true
     }
   ],

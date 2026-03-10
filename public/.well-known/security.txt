@@ -1,5 +1,5 @@
-Contact: mailto:security@technovera.com
+Contact: mailto:security@technoveraservices.com
 Expires: 2026-12-31T23:59:59.000Z
 Preferred-Languages: en, hi
-Canonical: https://www.technovera.com/.well-known/security.txt
-Policy: https://www.technovera.com/security-policy
+Canonical: https://www.technoveraservices.com/.well-known/security.txt
+Policy: https://www.technoveraservices.com/security-policy

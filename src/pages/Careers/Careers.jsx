@@ -114,7 +114,7 @@ const Careers = () => {
     hiringOrganization: {
       "@type": "Organization",
       name: "TechnoVera",
-      sameAs: "https://www.technovera.com",
+      sameAs: "https://www.technoveraservices.com",
     },
     jobLocation: {
       "@type": "Place",
@@ -134,7 +134,7 @@ const Careers = () => {
         title="Careers - Join Our Team"
         description="Join TechnoVera and build your future in IT. We're hiring Backend Developers, Frontend Developers, Full Stack Developers, and UI/UX Designers in Nashik."
         keywords="careers, jobs, IT jobs Nashik, developer jobs, frontend developer, backend developer, full stack developer, UI UX designer jobs"
-        url="https://www.technovera.com/careers"
+        url="https://www.technoveraservices.com/careers"
         structuredData={structuredData}
       />
       <div className="career-page">

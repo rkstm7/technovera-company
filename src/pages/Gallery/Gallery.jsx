@@ -59,7 +59,7 @@ export default function Gallery() {
     name: "TechnoVera Gallery",
     description:
       "Captured moments and visual stories from TechnoVera Solutions",
-    url: "https://www.technovera.com/gallery",
+    url: "https://www.technoveraservices.com/gallery",
   };
 
   return (
@@ -68,7 +68,7 @@ export default function Gallery() {
         title="Gallery - Our Visual Stories"
         description="Explore our gallery showcasing captured moments, project highlights, team events, and visual stories from TechnoVera Solutions."
         keywords="gallery, photos, images, company events, team photos, project showcase, visual portfolio"
-        url="https://www.technovera.com/gallery"
+        url="https://www.technoveraservices.com/gallery"
         structuredData={structuredData}
       />
       <main

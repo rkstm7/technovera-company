@@ -52,7 +52,7 @@ export default function BlogsPage() {
         title="Blog - Insights & Tutorials"
         description="Insights, tutorials, and updates from our team. Stay updated with the latest trends in web development, software engineering, and digital transformation."
         keywords="blog, tech blog, tutorials, insights, web development blog, software development, IT articles"
-        url="https://www.technovera.com/blog"
+        url="https://www.technoveraservices.com/blog"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gray-50 py-20">

@@ -4,8 +4,6 @@ import { publicNav } from "../../_nav";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { Menu, X } from "lucide-react";
 import "./Navbar.css";
-import logo1 from "../../assets/images/logo1.jpg";
-import techLogo from "../../assets/images/TechLogo2.jpg";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -49,14 +47,14 @@ export default function Navbar() {
           aria-label="TechnoVera Home"
         >
           <img
-            src={logo1}
+            src="/logo1.jpg"
             alt="TechnoVera Icon"
             className="nav-logo-img"
             style={{ width: "40px", height: "40px", marginRight: "10px" }}
             loading="eager"
           />
           <img
-            src={techLogo}
+            src="/TechLogo2.jpg"
             alt="TechnoVera - IT Services Company Logo"
             className="nav-logo-text-img"
             style={{ width: "auto", height: "30px", maxWidth: "180px" }}

@@ -45,7 +45,7 @@ export default function ProjectsPage() {
         title="Projects - Our Work & Case Studies"
         description="Showcasing our best work and successful implementations. Explore our portfolio of web development, mobile apps, and software projects delivered to satisfied clients."
         keywords="projects, portfolio, case studies, web projects, mobile apps, client work, successful implementations"
-        url="https://www.technovera.com/projects"
+        url="https://www.technoveraservices.com/projects"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gray-50 py-20">

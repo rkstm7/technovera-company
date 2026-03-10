@@ -120,7 +120,7 @@ export default function Blogs() {
     name: "TechnoVera Blog",
     description:
       "Insights & Strategies Powering the Future of Digital Transformation",
-    url: "https://www.technovera.com/blogs",
+    url: "https://www.technoveraservices.com/blogs",
     blogPost: [...heroBlogs, ...secondRowBlogs].map((blog) => ({
       "@type": "BlogPosting",
       headline: blog.title,
@@ -140,7 +140,7 @@ export default function Blogs() {
         title="Blogs - Insights & Digital Transformation Strategies"
         description="Explore expert insights on AI, DevOps, web development, SEO, UX/UI design, and digital transformation strategies from TechnoVera Solutions."
         keywords="technology blog, AI marketing, DevOps, web development, SEO tips, UX design, digital transformation, software engineering"
-        url="https://www.technovera.com/blogs"
+        url="https://www.technoveraservices.com/blogs"
         structuredData={structuredData}
       />
       <main className="blogs-section">
