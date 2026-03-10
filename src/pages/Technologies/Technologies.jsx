@@ -88,7 +88,7 @@ export default function Technologies() {
         title="Technologies - Our Tech Stack"
         description="Explore the cutting-edge technologies we use at TechnoVera Solutions including React, Node.js, Python, AWS, MongoDB, and more. Expert proficiency in frontend, backend, database, and cloud technologies."
         keywords="technologies, tech stack, React, Node.js, Python, MongoDB, AWS, frontend technologies, backend technologies, database, cloud computing, DevOps"
-        url="https://www.technovera.com/technologies"
+        url="https://www.technoveraservices.com/technologies"
         structuredData={structuredData}
       />
       <main className="tech-page">

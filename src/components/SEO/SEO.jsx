@@ -15,12 +15,12 @@ import { Helmet } from "react-helmet-async";
  * @param {Object} props.structuredData - JSON-LD structured data
  */
 export default function SEO({
-  title = "TechnoVera Solutions",
+  title = "TechnoVera IT Solutions",
   description = "TechnoVera Solutions provides modern website development, custom software, CRM systems, mobile apps, and IT solutions for businesses.",
   keywords = "web development, software development, CRM solutions, mobile apps, IT services",
   author = "TechnoVera Solutions",
-  image = "https://www.technovera.com/og-image.jpg",
-  url = "https://www.technovera.com",
+  image = "https://www.technoveraservices.com/og-image.jpg",
+  url = "https://www.technoveraservices.com",
   type = "website",
   structuredData = null,
 }) {

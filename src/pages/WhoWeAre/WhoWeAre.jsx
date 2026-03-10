@@ -73,7 +73,7 @@ export default function WhoWeAre() {
     mainEntity: {
       "@type": "Organization",
       name: "TechnoVera Solutions",
-      url: "https://www.technovera.com",
+      url: "https://www.technoveraservices.com",
       description: about.introText,
     },
   };
@@ -84,7 +84,7 @@ export default function WhoWeAre() {
         title="About Us - Who We Are"
         description="TechnoVera is a leading IT company redefining the digital landscape with innovative next-gen technologies. Meet our team of professionals delivering high-quality IT solutions."
         keywords="about technovera, IT company, team, founders, vision, mission, technology experts"
-        url="https://www.technovera.com/about"
+        url="https://www.technoveraservices.com/about"
         structuredData={structuredData}
       />
       <div className="wq-section">
