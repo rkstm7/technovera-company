@@ -20,6 +20,18 @@
       "dest": "/sitemap.xml"
     },
     {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/favicon.png",
+      "dest": "/favicon.png"
+    },
+    {
+      "src": "/favicon.jpg",
+      "dest": "/favicon.jpg"
+    },
+    {
       "src": "/assets/(.*)",
       "dest": "/assets/$1"
     },
