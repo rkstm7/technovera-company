@@ -1,0 +1,69 @@
+/* ===========================================================
+   FULL PAGE OVERLAY
+=========================================================== */
+.page-overlay {
+    position       : fixed;
+    inset          : 0;
+    background     : #000;
+    z-index        : -1;
+    opacity        : 0;
+    pointer-events : none;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+
+    transition: opacity 0.45s ease, z-index 0s linear 0.45s;
+}
+
+/* When the overlay is active */
+.page-overlay.show {
+    opacity       : 1;
+    z-index       : 9999;
+    pointer-events: all;
+    transition    : opacity 0.45s ease;
+}
+
+/* ===========================================================
+   LOADER TEXT
+=========================================================== */
+.page-loader span {
+    color         : white;
+    font-size     : 2rem;
+    letter-spacing: 2px;
+    animation     : fadePulse 1.6s infinite ease-in-out;
+    font-weight   : 500;
+}
+
+/* Pulsing fade animation */
+@keyframes fadePulse {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+/* ===========================================================
+   OPTIONAL SLIDE DOWN EFFECT WHEN LOADING PAGE
+=========================================================== */
+.page-overlay.show .page-loader {
+    animation: slideDown 0.5s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity  : 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity  : 1;
+    }
+}

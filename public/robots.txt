@@ -1,0 +1,15 @@
+# robots.txt for TechnoVera Solutions
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private pages
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# Sitemap location
+Sitemap: https://www.technovera.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1

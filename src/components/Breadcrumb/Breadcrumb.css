@@ -1,0 +1,217 @@
+/* Breadcrumb Container - Light/Dark Mode */
+.breadcrumb-container {
+  padding: 1rem 2rem;
+  margin: 0;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  transition: all 0.3s ease;
+  background: transparent;
+  display: block;
+}
+
+/* Hide on Mobile (below 768px) */
+@media (max-width: 767px) {
+  .breadcrumb-container {
+    display: none !important;
+  }
+}
+
+/* Tablet adjustments (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .breadcrumb-container {
+    padding: 0.875rem 1.5rem;
+    top: 68px;
+  }
+}
+
+/* Desktop (above 1024px) */
+@media (min-width: 1025px) {
+  .breadcrumb-container {
+    display: block;
+  }
+}
+
+/* Light Mode Default */
+.breadcrumb-light {
+  --breadcrumb-bg: rgba(255, 255, 255, 0.95);
+  --breadcrumb-text: #374151;
+  --breadcrumb-text-secondary: #6b7280;
+  --breadcrumb-text-muted: #9ca3af;
+  --breadcrumb-border: rgba(229, 231, 235, 0.8);
+  --breadcrumb-hover-bg: rgba(249, 250, 251, 0.9);
+  --breadcrumb-active-bg: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  --breadcrumb-active-text: #ffffff;
+}
+
+/* Dark Mode */
+.breadcrumb-dark {
+  --breadcrumb-bg: rgba(31, 41, 55, 0.95);
+  --breadcrumb-text: #f9fafb;
+  --breadcrumb-text-secondary: #d1d5db;
+  --breadcrumb-text-muted: #9ca3af;
+  --breadcrumb-border: rgba(55, 65, 81, 0.8);
+  --breadcrumb-hover-bg: rgba(55, 65, 81, 0.9);
+  --breadcrumb-active-text: #ffffff;
+  --breadcrumb-shadow: rgba(129, 140, 248, 0.4);
+}
+
+.breadcrumb-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-wrapper {
+    padding: 0.625rem 1rem;
+  }
+}
+
+.breadcrumb-segment {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--breadcrumb-text-secondary);
+}
+
+/* Home Link */
+.breadcrumb-home {
+  color: var(--breadcrumb-text-secondary);
+  background: var(--breadcrumb-hover-bg);
+  border: 1px solid var(--breadcrumb-border);
+}
+
+.breadcrumb-home:hover {
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
+  border-color: #6366f1;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+/* Regular Links */
+.breadcrumb-link {
+  color: var(--breadcrumb-text-secondary);
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.breadcrumb-link:hover {
+  color: #6366f1;
+  background: var(--breadcrumb-hover-bg);
+  border-color: var(--breadcrumb-border);
+  transform: translateX(2px);
+}
+
+/* Current/Active Page */
+.breadcrumb-current {
+  color: var(--breadcrumb-active-text);
+  background: var(--breadcrumb-active-bg);
+  font-weight: 600;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 12px var(--breadcrumb-shadow);
+}
+
+/* Icons */
+.breadcrumb-separator {
+  width: 1rem;
+  height: 1rem;
+  color: var(--breadcrumb-text-muted);
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.breadcrumb-home:hover .breadcrumb-icon {
+  transform: scale(1.1);
+}
+
+/* Dark Mode Specific Enhancements */
+.breadcrumb-dark .breadcrumb-home {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.breadcrumb-dark .breadcrumb-home:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: #818cf8;
+  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.25);
+}
+
+.breadcrumb-dark .breadcrumb-link {
+  color: var(--breadcrumb-text-secondary);
+}
+
+.breadcrumb-dark .breadcrumb-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #818cf8;
+}
+
+.breadcrumb-dark .breadcrumb-separator {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Light Mode Specific Enhancements */
+.breadcrumb-light .breadcrumb-home {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+}
+
+.breadcrumb-light .breadcrumb-link:hover {
+  background: #f9fafb;
+}
+
+/* Responsive Adjustments */
+
+/* Tablet - Show compact version */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .breadcrumb-wrapper {
+    padding: 0.625rem 1rem;
+  }
+  
+  .breadcrumb-item {
+    font-size: 0.8125rem;
+    padding: 0.4rem 0.625rem;
+  }
+  
+  .breadcrumb-icon,
+  .breadcrumb-separator {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}
+
+/* Desktop - Full version */
+@media (min-width: 1025px) {
+  .breadcrumb-wrapper {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .breadcrumb-item {
+    font-size: 0.875rem;
+  }
+}

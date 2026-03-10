@@ -1,0 +1,27 @@
+{
+  "name": "TechnoVera Solutions",
+  "short_name": "TechnoVera",
+  "description": "Leading IT solutions provider offering web development, software development, CRM systems, and mobile applications",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo1.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "technology", "productivity"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

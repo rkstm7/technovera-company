@@ -1,0 +1,118 @@
+/* Home Page Wrapper */
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
+  overflow-x: hidden;
+}
+
+.home-section {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+/* Add consistent spacing between sections */
+.home-section + .home-section {
+  margin-top: clamp(4rem, 8vw, 8rem);
+}
+
+/* Hero section - no top margin */
+.home-section:first-of-type {
+  margin-top: 0;
+}
+
+/* Add subtle section separators */
+.home-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1400px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--border-color) 20%,
+    var(--border-color) 80%,
+    transparent 100%
+  );
+  opacity: 0.3;
+}
+
+/* Remove separator from last section */
+.home-section:last-of-type::after {
+  display: none;
+}
+
+/* Ensure smooth transitions for dark mode */
+.home-page * {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Add breathing room for content */
+.home-section > * {
+  padding-left: clamp(1rem, 5vw, 2rem);
+  padding-right: clamp(1rem, 5vw, 2rem);
+}
+
+/* Responsive spacing adjustments */
+@media (max-width: 768px) {
+  .home-section + .home-section {
+    margin-top: clamp(3rem, 6vw, 5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .home-section + .home-section {
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+  }
+}
+
+/* Dark theme adjustments */
+:root.dark .home-page {
+  background: var(--bg-primary);
+}
+
+:root.dark .home-section {
+  background: var(--bg-primary);
+}
+
+/* Add subtle background patterns for visual interest */
+.home-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add focus styles for accessibility */
+.home-page a:focus-visible,
+.home-page button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 4px;
+  border-radius: 4px;
+}

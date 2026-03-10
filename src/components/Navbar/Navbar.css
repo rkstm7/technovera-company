@@ -1,0 +1,686 @@
+/* ============================================================
+   NAVBAR ROOT
+============================================================ */
+.nav-container {
+    background: rgba(var(--bg-primary-rgb, 255, 255, 255), 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    padding-top: env(safe-area-inset-top);
+    box-shadow: 0 2px 20px var(--shadow-color);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 2px solid transparent;
+    animation: navSlideDown 0.6s ease;
+}
+
+@keyframes navSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-container.scrolled {
+    box-shadow: 0 4px 30px var(--shadow-color);
+    background: rgba(var(--bg-primary-rgb, 255, 255, 255), 0.98);
+    border-bottom-color: var(--border-color);
+}
+
+.nav-container.scrolled::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), #a78bfa);
+    opacity: 0.6;
+}
+
+/* Dark theme navbar */
+:root.dark .nav-container {
+    background: rgba(15, 23, 42, 0.92);
+}
+
+:root.dark .nav-container.scrolled {
+    background: rgba(15, 23, 42, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================================
+   NAV WRAPPER
+============================================================ */
+.nav-wrapper {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0.875rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .nav-wrapper {
+        padding: 0.875rem 1.25rem;
+        gap: 1rem;
+    }
+}
+
+/* ============================================================
+   LOGO
+============================================================ */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-logo:hover {
+    transform: scale(1.02);
+}
+
+.nav-logo-img {
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.nav-logo:hover .nav-logo-img {
+    filter: drop-shadow(0 4px 8px rgba(var(--primary-rgb), 0.3));
+}
+
+.nav-logo-text {
+    font-size: 1.15rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+:root.dark .nav-logo-text {
+    background: linear-gradient(135deg, #60a5fa, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Desktop - larger logo */
+@media (min-width: 1024px) {
+    .nav-logo-img {
+        width: 55px;
+        height: 55px;
+        max-width: 55px;
+        max-height: 55px;
+    }
+    
+    .nav-logo-text {
+        font-size: 1.35rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .nav-logo-img {
+        width: 45px;
+        height: 45px;
+        max-width: 45px;
+        max-height: 45px;
+    }
+    
+    .nav-logo-text {
+        font-size: 1.15rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .nav-logo-img {
+        width: 40px;
+        height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+    }
+    
+    .nav-logo-text {
+        font-size: 1rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .nav-logo-img {
+        width: 36px;
+        height: 36px;
+        max-width: 36px;
+        max-height: 36px;
+    }
+    
+    .nav-logo-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* ============================================================
+   DESKTOP MENU
+============================================================ */
+.nav-desktop {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
+    flex-wrap: nowrap;
+}
+
+.nav-item {
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.nav-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(var(--primary-rgb), 0.08);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-item::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), #a78bfa);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.nav-item:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.nav-item:hover::before {
+    opacity: 1;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+    width: 90%;
+}
+
+.nav-item.active {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.nav-item.active::before {
+    opacity: 1;
+}
+
+:root.dark .nav-item::before {
+    background: rgba(96, 165, 250, 0.1);
+}
+
+:root.dark .nav-item.active {
+    color: #60a5fa;
+}
+
+/* ============================================================
+   NAV ACTIONS (Admin + Theme Toggle)
+============================================================ */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+    margin-left: 0.75rem;
+    border-left: 2px solid var(--border-color);
+}
+
+:root.dark .nav-actions {
+    border-left-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-admin-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-admin-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-admin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.4);
+}
+
+.nav-admin-btn:hover::before {
+    opacity: 1;
+}
+
+.nav-admin-btn svg,
+.nav-admin-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+:root.dark .nav-admin-btn {
+    background: linear-gradient(135deg, #60a5fa, #818cf8);
+}
+
+:root.dark .nav-admin-btn::before {
+    background: linear-gradient(135deg, #818cf8, #60a5fa);
+}
+
+:root.dark .nav-admin-btn:hover {
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
+}
+
+.nav-theme-toggle {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    margin-left: 0.75rem;
+    border-left: 2px solid var(--border-color);
+}
+
+:root.dark .nav-theme-toggle {
+    border-left-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================================
+   HAMBURGER
+============================================================ */
+.nav-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    color: var(--text-primary);
+    padding: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1001;
+    overflow: hidden;
+    margin-left: auto;
+}
+
+.nav-hamburger::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-hamburger svg {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.nav-hamburger:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: rgba(var(--primary-rgb), 0.1);
+    transform: scale(1.08) rotate(5deg);
+}
+
+.nav-hamburger:hover svg {
+    transform: scale(1.1);
+}
+
+.nav-hamburger.open {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-color: transparent;
+    transform: rotate(90deg);
+}
+
+.nav-hamburger.open::before {
+    opacity: 1;
+}
+
+:root.dark .nav-hamburger {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+:root.dark .nav-hamburger:hover {
+    border-color: #60a5fa;
+    background: rgba(96, 165, 250, 0.1);
+}
+
+:root.dark .nav-hamburger.open {
+    background: linear-gradient(135deg, #60a5fa, #818cf8);
+}
+
+@media (max-width: 480px) {
+    .nav-hamburger {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ============================================================
+   MOBILE MENU OVERLAY
+============================================================ */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 998;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ============================================================
+   MOBILE MENU
+============================================================ */
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(320px, 85vw);
+    height: 100vh;
+    background: var(--bg-primary);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -4px 0 24px var(--shadow-color);
+    border-left: 1px solid var(--border-color);
+    z-index: 999;
+    overflow-y: auto;
+    padding-top: 80px;
+}
+
+.nav-mobile.open {
+    right: 0;
+}
+
+:root.dark .nav-mobile {
+    background: rgba(15, 23, 42, 0.98);
+    border-left-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mobile-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: slideInRight 0.4s ease forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    border-radius: 0 4px 4px 0;
+}
+
+.mobile-item-text {
+    transition: transform 0.3s ease;
+}
+
+.mobile-item-arrow {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.mobile-item:hover {
+    background: rgba(var(--primary-rgb), 0.1);
+    transform: translateX(4px);
+}
+
+.mobile-item:hover::before,
+.mobile-item.active::before {
+    transform: scaleY(1);
+}
+
+.mobile-item:hover .mobile-item-arrow,
+.mobile-item.active .mobile-item-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile-item.active {
+    background: rgba(var(--primary-rgb), 0.15);
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.mobile-item.admin-item {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    margin-top: 0.5rem;
+    border-radius: 12px;
+}
+
+.mobile-item.admin-item .mobile-item-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mobile-item.admin-item:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    transform: translateX(4px);
+}
+
+.mobile-item.admin-item::before {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+:root.dark .mobile-item:hover {
+    background: rgba(96, 165, 250, 0.1);
+}
+
+:root.dark .mobile-item.active {
+    background: rgba(96, 165, 250, 0.15);
+    color: #60a5fa;
+}
+
+:root.dark .mobile-item.admin-item {
+    background: linear-gradient(135deg, #60a5fa, #818cf8);
+}
+
+:root.dark .mobile-item.admin-item:hover {
+    background: linear-gradient(135deg, #818cf8, #60a5fa);
+}
+
+.mobile-theme-toggle {
+    padding: 1.25rem;
+    margin-top: 1rem;
+    border-top: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    animation: slideInRight 0.4s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.mobile-theme-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+:root.dark .mobile-theme-toggle {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================================
+   RESPONSIVE BEHAVIOR
+============================================================ */
+@media (min-width: 768px) {
+    .nav-hamburger {
+        display: none;
+    }
+
+    .nav-desktop {
+        display: flex;
+    }
+
+    .nav-mobile,
+    .nav-overlay {
+        display: none !important;
+    }
+}
+
+/* ============================================================
+   TABLET BREAKPOINT
+============================================================ */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav-wrapper {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-desktop {
+        gap: 1.5rem;
+    }
+
+    .nav-item {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================================
+   MOBILE SMALL (iPhone SE, Android small)
+============================================================ */
+@media (max-width: 380px) {
+    .nav-wrapper {
+        padding: 0.875rem 1rem;
+    }
+
+    .nav-logo-img {
+        width: 115px;
+    }
+
+    .mobile-item {
+        padding: 0.875rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .nav-mobile {
+        width: 90vw;
+    }
+}
+
+/* ============================================================
+   ACCESSIBILITY
+============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    .nav-container,
+    .nav-item,
+    .mobile-item,
+    .nav-hamburger,
+    .nav-mobile {
+        transition: none;
+        animation: none;
+    }
+}

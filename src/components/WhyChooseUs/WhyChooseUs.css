@@ -1,0 +1,405 @@
+/* ============================
+   SECTION WRAPPER
+============================ */
+.wc-section {
+    width: 100%;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    padding: 6rem 2rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.wc-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+:root.dark .wc-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+:root.dark .wc-section::before {
+    background: radial-gradient(circle at 20% 50%, rgba(96, 165, 250, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+}
+
+.wc-container {
+    max-width: 1300px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================
+   HEADER SECTION
+============================ */
+.wc-header {
+    margin-bottom: 4rem;
+}
+
+.wc-badge {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    background: var(--primary-light);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+:root.dark .wc-badge {
+    background: rgba(96, 165, 250, 0.15);
+    color: #60a5fa;
+}
+
+.wc-title {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.wc-description {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .wc-title {
+        font-size: 2rem;
+    }
+    
+    .wc-description {
+        font-size: 1rem;
+    }
+}
+
+/* ============================
+   REASONS GRID
+============================ */
+.wc-reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.wc-reason-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.wc-reason-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.wc-reason-card:hover::before {
+    transform: scaleX(1);
+}
+
+.wc-reason-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px var(--shadow-color);
+}
+
+:root.dark .wc-reason-card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.wc-reason-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.wc-reason-card:hover .wc-reason-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.wc-reason-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.wc-reason-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.wc-reason-hover-indicator {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+}
+
+.wc-reason-card:hover .wc-reason-hover-indicator {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .wc-reasons-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* ============================
+   IMPLEMENTATION STEPS
+============================ */
+.wc-steps-section {
+    margin-top: 5rem;
+    padding: 3rem 0;
+}
+
+.wc-steps-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.wc-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    position: relative;
+}
+
+.wc-step-card {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.wc-step-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+:root.dark .wc-step-card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.wc-step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.wc-step-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    margin: 2rem auto 1.5rem;
+    border-radius: 50%;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.wc-step-card:hover .wc-step-icon-wrapper {
+    transform: scale(1.1);
+    background: var(--primary-color);
+}
+
+.wc-step-icon {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.wc-step-card:hover .wc-step-icon {
+    color: white;
+}
+
+.wc-step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.wc-step-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.wc-step-connector {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .wc-step-connector {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: -2rem;
+        transform: translateY(-50%);
+        color: var(--primary-color);
+        opacity: 0.5;
+    }
+    
+    .wc-step-card:last-child .wc-step-connector {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .wc-steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .wc-steps-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================
+   STATS SECTION
+============================ */
+.wc-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 5rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
+}
+
+.wc-stat-item {
+    text-align: center;
+    color: white;
+}
+
+.wc-stat-icon {
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.wc-stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wc-stat-label {
+    font-size: 0.95rem;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .wc-stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+    
+    .wc-stat-number {
+        font-size: 2rem;
+    }
+}
+
+/* ============================
+   ANIMATIONS
+============================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

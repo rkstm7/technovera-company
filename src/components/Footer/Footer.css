@@ -1,0 +1,440 @@
+/* ========================================================
+   ORIGINAL BASE FOOTER STYLES (PRESERVED 100%)
+========================================================== */
+
+.footer-root {
+    position        : relative;
+    background-color: #1e293b;
+    color           : #e5e7eb;
+    overflow        : hidden;
+    width           : 100%;
+}
+
+:root:not(.dark) .footer-root {
+    background-color: #f8fafc;
+    color           : #1e293b;
+}
+
+/* Background image + overlay */
+.footer-bg {
+    position: absolute;
+    inset   : 0;
+    width   : 100%;
+    height  : 100%;
+}
+
+.footer-img {
+    width     : 100%;
+    height    : 100%;
+    object-fit: cover;
+    opacity   : 0.18;
+}
+
+:root:not(.dark) .footer-img {
+    opacity: 0.12;
+}
+
+.footer-overlay {
+    position  : absolute;
+    inset     : 0;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.95), rgba(15, 23, 42, 0.8));
+}
+
+:root:not(.dark) .footer-overlay {
+    background: linear-gradient(to top right, rgba(248, 250, 252, 0.88), rgba(241, 245, 249, 0.82));
+}
+
+/* Content grid */
+.footer-container {
+    position             : relative;
+    z-index              : 10;
+    max-width            : 1280px;
+    margin               : 0 auto;
+    padding              : 4rem 1.5rem;
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap                  : 3rem;
+}
+
+/* Titles */
+.footer-heading {
+    font-weight  : 700;
+    font-size    : 1.25rem;
+    margin-bottom: 1rem;
+    color        : #e5e7eb;
+}
+
+:root:not(.dark) .footer-heading {
+    color: #1e293b;
+}
+
+.footer-brand {
+    font-size    : 1.75rem;
+    font-weight  : 800;
+    margin-bottom: 1rem;
+    color        : #60a5fa;
+}
+
+:root:not(.dark) .footer-brand {
+    color: #2563eb;
+}
+
+/* Description */
+.footer-desc {
+    font-size    : 0.95rem;
+    line-height  : 1.6;
+    margin-bottom: 1.5rem;
+    max-width    : 400px;
+    color        : #cbd5e1;
+}
+
+:root:not(.dark) .footer-desc {
+    color: #475569;
+}
+
+/* Social icons */
+.footer-social-row,
+.footer-social {
+    display: flex;
+    gap    : 0.75rem;
+}
+
+.social-icon {
+    width          : 38px;
+    height         : 38px;
+    border-radius  : 50%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    background     : rgba(255, 255, 255, 0.1);
+    color          : #93c5fd;
+    font-size      : 14px;
+    transition     : all 0.3s ease;
+}
+
+:root:not(.dark) .social-icon {
+    background: rgba(0, 0, 0, 0.06);
+    color     : #2563eb;
+}
+
+.social-icon:hover {
+    background: #2563eb;
+    color     : #fff;
+    transform : translateY(-3px);
+}
+
+:root:not(.dark) .social-icon:hover {
+    background: #1d4ed8;
+}
+
+/* Inline links */
+
+.quick-link{
+    color: #cbd5e1 !important;
+}
+
+:root:not(.dark) .quick-link {
+    color: #475569 !important;
+}
+
+.footer-links-inline,
+.footer-links {
+    display  : flex;
+    flex-wrap: wrap;
+    gap      : 0.8rem;
+    padding  : 0;
+    margin   : 0;
+}
+
+.footer-link {
+    font-size      : 0.95rem;
+    color          : #d1d5db;
+    text-decoration: none;
+    transition     : 0.25s;
+}
+
+:root:not(.dark) .footer-link {
+    color: #475569;
+}
+
+.footer-link:hover {
+    color    : #60a5fa;
+    transform: translateY(-2px);
+}
+
+:root:not(.dark) .footer-link:hover {
+    color: #2563eb;
+}
+
+/* Contact */
+.footer-contact-wrapper {
+    display       : flex;
+    flex-direction: column;
+    gap           : 1rem;
+}
+
+.footer-address-box {
+    background   : rgba(255, 255, 255, 0.08);
+    padding      : 0.8rem 1rem;
+    border-radius: 8px;
+    display      : flex;
+    gap          : 0.6rem;
+    align-items  : center;
+    border       : 1px solid rgba(255, 255, 255, 0.12);
+}
+
+:root:not(.dark) .footer-address-box {
+    background  : rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.footer-contact-row {
+    display        : flex;
+    justify-content: space-between;
+    gap            : 1rem;
+}
+
+.footer-contact-item {
+    display    : flex;
+    align-items: center;
+    gap        : 0.4rem;
+    color      : #d1d5db;
+}
+
+:root:not(.dark) .footer-contact-item {
+    color: #475569;
+}
+
+.hover-link {
+    color     : #d1d5db;
+    transition: 0.25s;
+}
+
+:root:not(.dark) .hover-link {
+    color: #475569;
+}
+
+.hover-link:hover {
+    color: #60a5fa;
+}
+
+:root:not(.dark) .hover-link:hover {
+    color: #2563eb;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    position  : relative;
+    z-index   : 3;
+    text-align: center;
+    padding   : 1rem 0;
+    color     : #9ca3af;
+    font-size : 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+:root:not(.dark) .footer-bottom {
+    color     : #64748b;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-bottom p {
+    color: inherit;
+}
+
+.footer-bottom a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #60a5fa;
+}
+
+:root:not(.dark) .footer-bottom a:hover {
+    color: #2563eb;
+}
+
+/* Base responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        text-align: center;
+    }
+
+    .footer-social-row {
+        justify-content: center;
+    }
+
+    .footer-links-inline {
+        justify-content: center;
+    }
+
+    .footer-address-box {
+        justify-content: center;
+    }
+
+    .footer-contact-row {
+        flex-direction: column;
+        text-align    : center;
+        gap           : 0.8rem;
+    }
+}
+
+/* ========================================================
+   NEW ADVANCED MODERN UI + ANIMATION EXTENSIONS
+   (Enhances old CSS, does NOT replace anything)
+========================================================== */
+
+/* Smooth fade-up animation for sections */
+.footer-section {
+    animation: fadeUpFooter 0.9s ease-in-out;
+}
+
+@keyframes fadeUpFooter {
+    from {
+        opacity  : 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity  : 1;
+        transform: translateY(0);
+    }
+}
+
+/* Neon glow social icons */
+.social-icon {
+    position       : relative;
+    overflow       : hidden;
+    backdrop-filter: blur(6px);
+    box-shadow     : 0 0 10px rgba(96, 165, 250, 0.12);
+}
+
+.social-icon:hover {
+    box-shadow: 0 0 16px rgba(96, 165, 250, 0.55),
+        0 0 32px rgba(96, 165, 250, 0.35);
+    transform: translateY(-6px) scale(1.12) rotate(2deg);
+}
+
+/* Soft floating animation */
+@keyframes floatSoft {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.social-icon {
+    animation: floatSoft 3.5s infinite ease-in-out;
+}
+
+/* Link glow underline */
+.footer-link {
+    position: relative;
+}
+
+.footer-link::after {
+    content   : "";
+    position  : absolute;
+    left      : 0;
+    bottom    : -4px;
+    width     : 0%;
+    height    : 2px;
+    background: #60a5fa;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+/* Address card shimmer + glow */
+.footer-address-box {
+    position  : relative;
+    transition: 0.35s ease;
+}
+
+/* Wrap long address text */
+.footer-address-text {
+    white-space: normal;
+    line-height: 1.5;
+    display    : block;
+    width      : 100%;
+    color      : #d1d5db;
+}
+
+:root:not(.dark) .footer-address-text {
+    color: #475569;
+}
+
+/* Single contact row for email + phone */
+.footer-single-contact {
+    display    : flex;
+    align-items: center;
+    gap        : 0.6rem;
+    font-size  : 0.95rem;
+    color      : #d1d5db;
+}
+
+:root:not(.dark) .footer-single-contact {
+    color: #475569;
+}
+
+.footer-address-box:hover {
+    transform   : translateY(-4px);
+    box-shadow  : 0 0 14px rgba(96, 165, 250, 0.35);
+    border-color: rgba(96, 165, 250, 0.4);
+}
+
+.footer-address-box::after {
+    content : "";
+    position: absolute;
+    inset   : 0;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(96, 165, 250, 0.2),
+            transparent);
+    opacity   : 0;
+    transition: opacity 0.4s;
+}
+
+.footer-address-box:hover::after {
+    opacity: 1;
+}
+
+/* Glow on email / phone */
+.hover-link:hover {
+    text-shadow: 0 0 6px rgba(96, 165, 250, 0.45);
+}
+
+/* Responsive Enhancements */
+@media (max-width: 900px) {
+    .footer-contact-row {
+        flex-direction: column;
+        gap           : 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-brand {
+        font-size: 1.6rem;
+    }
+
+    .footer-heading {
+        font-size: 1.2rem;
+    }
+
+    .footer-desc {
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        width : 34px;
+        height: 34px;
+    }
+}

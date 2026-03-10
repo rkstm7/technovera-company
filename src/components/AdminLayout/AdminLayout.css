@@ -1,0 +1,10 @@
+.admin-layout {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+/* Remove default navbar and footer for admin pages */
+.admin-layout .nav-container,
+.admin-layout footer {
+  display: none;
+}

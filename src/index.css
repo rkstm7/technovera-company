@@ -1,0 +1,273 @@
+/* -------------------------------------------
+   Global Styles — TechnoVera Solutions Pvt. Ltd.
+   ------------------------------------------- */
+
+/* Import Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for Theme */
+:root {
+  /* Light Theme Colors */
+  --primary-color: #2563eb;
+  --primary-light: #dbeafe;
+  --primary-dark : #1e40af;
+  --primary-rgb  : 37, 99, 235;
+
+  --secondary-color: #3b82f6;
+  --secondary-light: #bfdbfe;
+  --secondary-rgb  : 59, 130, 246;
+
+  --bg-primary  : #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary : #f1f5f9;
+
+  --text-primary  : #0f172a;
+  --text-secondary: #475569;
+  --text-muted    : #94a3b8;
+
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error  : #ef4444;
+  --info   : #3b82f6;
+}
+
+/* Dark Theme Colors */
+:root.dark {
+  --primary-color: #60a5fa;
+  --primary-light: rgba(96, 165, 250, 0.2);
+  --primary-dark : #3b82f6;
+  --primary-rgb  : 96, 165, 250;
+
+  --secondary-color: #818cf8;
+  --secondary-light: rgba(129, 140, 248, 0.2);
+  --secondary-rgb  : 129, 140, 248;
+
+  --bg-primary  : #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary : #334155;
+
+  --text-primary  : #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted    : #64748b;
+
+  --border-color: #334155;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+
+  --success: #34d399;
+  --warning: #fbbf24;
+  --error  : #f87171;
+  --info   : #60a5fa;
+}
+
+/* Apply theme colors */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Basic element styling */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+p, span, div {
+  color: var(--text-primary);
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Inputs */
+input, textarea, select {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Cards */
+.card, [class*="card"] {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.card:hover, [class*="card"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px var(--shadow-color);
+}
+
+/* Sections */
+section {
+  background: var(--bg-primary);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--primary-dark), var(--primary-color));
+}
+
+/* Text selection */
+::selection {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.3);
+  }
+
+  .shadow-glow-lg {
+    box-shadow: 0 0 40px rgba(var(--primary-rgb), 0.4);
+  }
+}
+
+/* Dark theme specific overrides */
+:root.dark h1,
+:root.dark h2,
+:root.dark h3,
+:root.dark h4,
+:root.dark h5,
+:root.dark h6 {
+  color: var(--text-primary);
+}
+
+:root.dark p,
+:root.dark span,
+:root.dark div {
+  color: var(--text-primary);
+}
+
+:root.dark .card,
+:root.dark [class*="card"] {
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
+}
+
+:root.dark input,
+:root.dark textarea,
+:root.dark select {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+:root.dark input::placeholder,
+:root.dark textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Tailwind overrides for dark theme */
+:root.dark .bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+
+:root.dark .bg-gray-50,
+:root.dark .bg-gray-100 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+:root.dark .text-gray-600,
+:root.dark .text-gray-700,
+:root.dark .text-gray-800,
+:root.dark .text-gray-900 {
+  color: var(--text-secondary) !important;
+}
+
+:root.dark .text-gray-400,
+:root.dark .text-gray-500 {
+  color: var(--text-muted) !important;
+}
+
+:root.dark .border-gray-200,
+:root.dark .border-gray-300 {
+  border-color: var(--border-color) !important;
+}

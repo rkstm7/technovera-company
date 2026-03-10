@@ -1,0 +1,690 @@
+/* ============================
+   CSS VARIABLES
+============================ */
+:root {
+    --vm-bg: var(--bg-primary);
+    --vm-card-bg: var(--bg-secondary);
+    --vm-text: var(--text-primary);
+    --vm-text-secondary: var(--text-secondary);
+    --vm-circle-bg: #f8fafc;
+    --vm-circle-border: var(--border-color);
+    --vm-quadrant-icon: rgba(37, 99, 235, 0.05);
+    --vm-quadrant-text: rgba(37, 99, 235, 0.08);
+    --vm-cross-line: rgba(0, 0, 0, 0.1);
+    --vm-btn-bg: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --vm-btn-hover-shadow: 0 12px 32px rgba(var(--primary-rgb), 0.4);
+}
+
+:root.dark {
+    --vm-bg: #0f172a;
+    --vm-card-bg: #1e293b;
+    --vm-circle-bg: #111;
+    --vm-circle-border: #222;
+    --vm-quadrant-icon: #0a0a0a;
+    --vm-quadrant-text: #161616;
+    --vm-cross-line: rgba(255, 255, 255, 0.07);
+    --vm-btn-bg: linear-gradient(135deg, #60a5fa, #818cf8);
+    --vm-btn-hover-shadow: 0 12px 32px rgba(96, 165, 250, 0.5);
+}
+
+/* ============================
+   SECTION WRAPPER
+============================ */
+.vm-section {
+    width: 100%;
+    background: linear-gradient(135deg, var(--vm-bg) 0%, var(--vm-card-bg) 100%);
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.vm-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 40%, rgba(var(--primary-rgb), 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 60%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    animation: bgFloat 10s ease-in-out infinite;
+}
+
+@keyframes bgFloat {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* ============================
+   GRID CONTAINER
+============================ */
+.vm-container {
+    max-width: 1320px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .vm-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+}
+
+/* ============================
+   LEFT SIDE
+============================ */
+.vm-left {
+    color: var(--vm-text);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: color 0.3s ease;
+    animation: slideInLeft 0.8s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.vm-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    padding: 1.25rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% 200%;
+    border: 3px solid var(--vm-circle-border);
+    border-radius: 20px;
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    animation: fadeInScale 0.6s ease 0.2s both, gradientShift 4s ease infinite;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.vm-title:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+:root.dark .vm-title {
+    background: linear-gradient(135deg, #60a5fa, #93c5fd, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+:root.dark .vm-title:hover {
+    border-color: #60a5fa;
+}
+
+.vm-subtext {
+    font-size: 1.25rem;
+    color: var(--vm-text-secondary);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.7;
+    transition: color 0.3s ease;
+    animation: fadeIn 0.6s ease 0.4s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.vm-desc {
+    font-size: 1rem;
+    color: var(--vm-text-secondary);
+    line-height: 1.8;
+    animation: fadeIn 0.6s ease 0.6s both;
+}
+
+.vm-btn {
+    padding: 1rem 2.5rem;
+    margin-top: 1rem;
+    background: var(--vm-btn-bg);
+    border: 2px solid transparent;
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.3);
+    animation: btnFadeIn 0.6s ease 0.8s both;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes btnFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.vm-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.vm-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.vm-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: var(--vm-btn-hover-shadow);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .vm-btn {
+        margin: 1rem auto 0;
+    }
+}
+
+/* ============================
+   RIGHT SIDE — CIRCLE
+============================ */
+.vm-right {
+    display: flex;
+    justify-content: center;
+    animation: slideInRight 0.8s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.vm-circle {
+    width: min(500px, 90vw);
+    height: min(500px, 90vw);
+    border-radius: 50%;
+    background: var(--vm-circle-bg);
+    border: 4px solid var(--vm-circle-border);
+    position: relative;
+    overflow: visible;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 25px 70px var(--shadow-color);
+    animation: circleFloat 6s ease-in-out infinite;
+}
+
+@keyframes circleFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.02);
+    }
+}
+
+.vm-circle:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 35px 90px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+:root.dark .vm-circle {
+    background: rgba(17, 17, 17, 0.95);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+:root.dark .vm-circle:hover {
+    border-color: #60a5fa;
+}
+
+/* ============================
+   CROSS LINES
+============================ */
+.vm-cross-vertical,
+.vm-cross-horizontal {
+    background: var(--vm-cross-line);
+    position: absolute;
+    z-index: 1;
+}
+
+.vm-cross-vertical {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vm-cross-horizontal {
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ============================
+   QUADRANTS
+============================ */
+.vm-q {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: visible;
+}
+
+.vm-q:hover {
+    transform: scale(1.08);
+    z-index: 10;
+}
+
+.icon-bg {
+    background: var(--vm-quadrant-icon);
+    transition: background 0.3s ease;
+}
+
+.text-bg {
+    background: var(--vm-quadrant-text);
+    transition: background 0.3s ease;
+}
+
+.vm-q:hover.icon-bg {
+    background: rgba(var(--primary-rgb), 0.1);
+}
+
+.vm-q:hover.text-bg {
+    background: rgba(var(--primary-rgb), 0.12);
+}
+
+:root.dark .icon-bg {
+    background: rgba(96, 165, 250, 0.05);
+}
+
+:root.dark .text-bg {
+    background: rgba(96, 165, 250, 0.08);
+}
+
+:root.dark .vm-q:hover.icon-bg {
+    background: rgba(96, 165, 250, 0.12);
+}
+
+:root.dark .vm-q:hover.text-bg {
+    background: rgba(96, 165, 250, 0.15);
+}
+
+.vm-q1 {
+    top: 0;
+    left: 0;
+    border-radius: 100% 0 0 0;
+}
+
+.vm-q2 {
+    top: 0;
+    right: 0;
+    border-radius: 0 100% 0 0;
+}
+
+.vm-q3 {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 0 100%;
+}
+
+.vm-q4 {
+    bottom: 0;
+    right: 0;
+    border-radius: 0 0 100% 0;
+}
+
+/* ============================
+   QUADRANT INNER CONTENT
+============================ */
+.vm-q-inner {
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.icon-only {
+    justify-content: center;
+    align-items: center;
+}
+
+.text-only {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1.75rem;
+}
+
+/* ============================
+   CURVED BACKGROUND FOR TEXT
+============================ */
+.vm-q-inner.text-only {
+    position: relative;
+    border-radius: 50% 50% 45% 45% / 55% 55% 45% 45%;
+    overflow: visible;
+}
+
+.vm-q-inner.text-only::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--vm-card-bg);
+    opacity: 0.95;
+    border-radius: inherit;
+    z-index: -1;
+    box-shadow: 0 6px 20px var(--shadow-color);
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--vm-circle-border);
+    transition: all 0.3s ease;
+}
+
+.vm-q:hover .vm-q-inner.text-only::before {
+    opacity: 1;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+:root.dark .vm-q-inner.text-only::before {
+    background: rgba(30, 41, 59, 0.95);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+:root.dark .vm-q:hover .vm-q-inner.text-only::before {
+    border-color: #60a5fa;
+}
+
+/* Text alignment */
+.text-right-align {
+    text-align: right;
+    padding-right: 2rem;
+    align-items: flex-end;
+}
+
+.text-left-align {
+    text-align: left;
+    padding-left: 2rem;
+    align-items: flex-start;
+}
+
+/* ============================
+   TEXT STYLES - IMPROVED VISIBILITY
+============================ */
+.vm-heading {
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    font-weight: 800;
+    color: var(--vm-text);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.vm-q:hover .vm-heading {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+:root.dark .vm-heading {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+:root.dark .vm-q:hover .vm-heading {
+    color: #60a5fa;
+}
+
+.vm-text {
+    font-size: clamp(0.9rem, 1.9vw, 1.05rem);
+    color: var(--vm-text-secondary);
+    line-height: 1.7;
+    position: relative;
+    z-index: 3;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.vm-q:hover .vm-text {
+    color: var(--vm-text);
+}
+
+:root.dark .vm-text {
+    color: #cbd5e1;
+}
+
+:root.dark .vm-q:hover .vm-text {
+    color: #e2e8f0;
+}
+
+/* ============================
+   ICONS
+============================ */
+.vm-icon {
+    width: clamp(60px, 12vw, 85px);
+    height: clamp(60px, 12vw, 85px);
+    animation: floatIcon 3s infinite ease-in-out;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.3));
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 3;
+}
+
+.vm-q:hover .vm-icon {
+    transform: scale(1.3) rotate(15deg);
+    animation-play-state: paused;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+}
+
+.icon-yellow {
+    color: #fbbf24;
+}
+
+.icon-blue {
+    color: #60a5fa;
+}
+
+:root.dark .icon-yellow {
+    color: #fcd34d;
+    filter: drop-shadow(0 6px 16px rgba(251, 191, 36, 0.4));
+}
+
+:root.dark .icon-blue {
+    color: #93c5fd;
+    filter: drop-shadow(0 6px 16px rgba(96, 165, 250, 0.4));
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ============================
+   ANIMATIONS
+============================ */
+.animate-fade-up {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 768px) {
+    .vm-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .vm-title {
+        font-size: 2rem;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .vm-subtext {
+        font-size: 1.1rem;
+    }
+
+    .vm-desc {
+        font-size: 0.95rem;
+    }
+
+    .vm-circle {
+        width: min(380px, 90vw);
+        height: min(380px, 90vw);
+    }
+}
+
+@media (max-width: 480px) {
+    .vm-section {
+        padding: 3rem 1rem;
+    }
+
+    .vm-title {
+        font-size: 1.75rem;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .vm-subtext {
+        font-size: 1rem;
+    }
+
+    .vm-btn {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .vm-circle {
+        width: min(340px, 90vw);
+        height: min(340px, 90vw);
+    }
+
+    .text-only {
+        padding: 1.25rem 1rem;
+    }
+
+    .vm-heading {
+        font-size: 1rem;
+    }
+
+    .vm-text {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .vm-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ============================
+   ACCESSIBILITY
+============================ */
+@media (prefers-reduced-motion: reduce) {
+    .vm-circle,
+    .vm-icon,
+    .vm-left,
+    .vm-right,
+    .vm-title,
+    .vm-btn {
+        animation: none;
+    }
+
+    .vm-circle:hover,
+    .vm-btn:hover,
+    .vm-title:hover {
+        transform: none;
+    }
+}
+
+/* Circle Images */
+.vm-circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}

@@ -1,0 +1,153 @@
+/* ======================================================
+   GLOBAL DARK THEME SUPPORT FOR ALL COMPONENTS
+====================================================== */
+
+/* Ensure all text elements use theme colors */
+:root.dark h1,
+:root.dark h2,
+:root.dark h3,
+:root.dark h4,
+:root.dark h5,
+:root.dark h6 {
+  color: var(--text-primary);
+}
+
+:root.dark p,
+:root.dark span,
+:root.dark div {
+  color: var(--text-primary);
+}
+
+/* Background colors */
+:root.dark section,
+:root.dark article,
+:root.dark aside {
+  background-color: var(--bg-primary);
+}
+
+/* Cards and containers */
+:root.dark .card,
+:root.dark .container,
+:root.dark .box,
+:root.dark [class*="card"],
+:root.dark [class*="container"],
+:root.dark [class*="box"] {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+/* Buttons */
+:root.dark button:not([class*="gradient"]):not([class*="primary"]) {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+:root.dark button:hover:not([class*="gradient"]):not([class*="primary"]) {
+  background-color: var(--bg-tertiary);
+}
+
+/* Links */
+:root.dark a:not([class*="button"]):not([class*="btn"]) {
+  color: var(--primary-color);
+}
+
+/* Inputs */
+:root.dark input,
+:root.dark textarea,
+:root.dark select {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+:root.dark input::placeholder,
+:root.dark textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Borders */
+:root.dark [class*="border"],
+:root.dark hr {
+  border-color: var(--border-color);
+}
+
+/* Shadows */
+:root.dark [class*="shadow"] {
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+/* Text colors */
+:root.dark .text-gray-600,
+:root.dark .text-gray-700,
+:root.dark .text-gray-800,
+:root.dark .text-gray-900 {
+  color: var(--text-secondary) !important;
+}
+
+:root.dark .text-gray-400,
+:root.dark .text-gray-500 {
+  color: var(--text-muted) !important;
+}
+
+/* Background colors */
+:root.dark .bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+
+:root.dark .bg-gray-50,
+:root.dark .bg-gray-100 {
+  background-color: var(--bg-tertiary) !important;
+}
+
+:root.dark .bg-gray-200,
+:root.dark .bg-gray-300 {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Border colors */
+:root.dark .border-gray-200,
+:root.dark .border-gray-300 {
+  border-color: var(--border-color) !important;
+}
+
+/* Specific component overrides */
+:root.dark [class*="hero"],
+:root.dark [class*="Hero"] {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+:root.dark [class*="section"],
+:root.dark [class*="Section"] {
+  background-color: var(--bg-primary);
+}
+
+:root.dark [class*="testimonial"],
+:root.dark [class*="Testimonial"] {
+  background-color: var(--bg-secondary);
+}
+
+:root.dark [class*="blog"],
+:root.dark [class*="Blog"] {
+  background-color: var(--bg-primary);
+}
+
+:root.dark [class*="cta"],
+:root.dark [class*="CTA"] {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+/* Ensure images don't get affected */
+:root.dark img {
+  opacity: 0.95;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Prevent transition on page load */
+.preload * {
+  transition: none !important;
+}
