@@ -17,8 +17,8 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "TechnoVera Solutions",
-    url: "https://www.technovera.com",
-    logo: "https://www.technovera.com/logo.png",
+    url: "https://www.technoveraservices.com",
+    logo: "https://www.technoveraservices.com/favicon.png",
     description:
       "Leading IT solutions provider offering web development, software development, CRM systems, and mobile applications.",
     address: {
@@ -31,10 +31,10 @@ export default function Home() {
       availableLanguage: ["English", "Hindi"],
     },
     sameAs: [
-      "https://www.linkedin.com/company/technovera/",
-      "https://www.instagram.com/technovera/",
-      "https://twitter.com/technovera",
-      "https://www.facebook.com/technovera",
+      "#",
+      "#",
+      "#",
+      "#",
     ],
   };
 
@@ -44,7 +44,7 @@ export default function Home() {
         title="TechnoVera Solutions – Web Development, Software, IT & CRM Services"
         description="TechnoVera Solutions provides modern website development, custom software, CRM systems, mobile apps, and IT solutions for businesses. Trusted IT partner for scalable digital growth."
         keywords="web development, software development, CRM solutions, mobile apps, IT services, custom software, digital transformation, business solutions, TechnoVera"
-        url="https://www.technovera.com/"
+        url="https://www.technoveraservices.com/"
         structuredData={structuredData}
       />
       <div className="home-page">

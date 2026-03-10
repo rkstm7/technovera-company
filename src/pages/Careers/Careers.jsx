@@ -120,7 +120,7 @@ const Careers = () => {
       "@type": "Place",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Pune",
+        addressLocality: "Nashik",
         addressRegion: "Maharashtra",
         addressCountry: "IN",
       },
@@ -132,8 +132,8 @@ const Careers = () => {
     <>
       <SEO
         title="Careers - Join Our Team"
-        description="Join TechnoVera and build your future in IT. We're hiring Backend Developers, Frontend Developers, Full Stack Developers, and UI/UX Designers in Pune."
-        keywords="careers, jobs, IT jobs Pune, developer jobs, frontend developer, backend developer, full stack developer, UI UX designer jobs"
+        description="Join TechnoVera and build your future in IT. We're hiring Backend Developers, Frontend Developers, Full Stack Developers, and UI/UX Designers in Nashik."
+        keywords="careers, jobs, IT jobs Nashik, developer jobs, frontend developer, backend developer, full stack developer, UI UX designer jobs"
         url="https://www.technovera.com/careers"
         structuredData={structuredData}
       />
@@ -247,7 +247,7 @@ const Careers = () => {
                     </span>
                     <span className="job-meta-item">
                       <MapPin className="w-4 h-4" />
-                      {job.location || "Pune"}
+                      {job.location || "Nashik"}
                     </span>
                   </div>
 

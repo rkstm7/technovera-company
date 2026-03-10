@@ -39,8 +39,8 @@ export default function Footer() {
           title="Contact"
           type="contact"
           contactInfo={{
-            address: "Pune, Maharashtra, India",
-            email: "info@technovera.com",
+            address: "248, SICOF Flatted Building, MIDC, Satpur Colony, Nashik, Maharashtra, Pin Code- 422007",
+            email: "info@technoveraservices.com",
             phone: "+91 9762263417",
           }}
         />

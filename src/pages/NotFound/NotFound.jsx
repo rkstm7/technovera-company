@@ -10,9 +10,9 @@ export default function NotFound() {
   return (
     <>
       <SEO
-        title="404 - Page Not Found"
+        title="404 - Page Not Found | TechnoVera Solutions"
         description="The page you're looking for doesn't exist. Return to TechnoVera Solutions homepage."
-        url="https://www.technovera.com/404"
+        url="https://www.technoveraservices.com/404"
       />
       <div className="flex flex-col items-center justify-center min-h-[80vh] text-center px-4">
         <motion.h1

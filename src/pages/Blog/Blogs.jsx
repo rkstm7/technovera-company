@@ -38,22 +38,22 @@ export default function Blogs() {
   const socialLinks = [
     {
       name: "Instagram",
-      url: "https://www.instagram.com/technovera/",
+      url: "#",
       icon: insta,
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/company/technovera/",
+      url: "#",
       icon: linkedin,
     },
     {
       name: "Twitter",
-      url: "https://twitter.com/technovera",
+      url: "#",
       icon: x,
     },
     {
       name: "Facebook",
-      url: "https://www.facebook.com/technovera",
+      url: "#",
       icon: fb,
     },
   ];

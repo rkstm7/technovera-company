@@ -63,48 +63,23 @@ export default function FooterSection({
             />
           </div>
 
-          {/* SOCIAL ICONS ROW */}
+          {/* SOCIAL ICONS ROW - Icons only, no links */}
           <div className="footer-social-row">
-            <a
-              href="https://www.linkedin.com/company/technovera/"
-              target="_blank"
-              rel="noreferrer"
-              className="social-icon"
-            >
+            <div className="social-icon">
               <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a
-              href="https://www.facebook.com/technovera/"
-              target="_blank"
-              rel="noreferrer"
-              className="social-icon"
-            >
+            </div>
+            <div className="social-icon">
               <FontAwesomeIcon icon={faFacebook} />
-            </a>
-            <a
-              href="https://www.instagram.com/technovera/"
-              target="_blank"
-              rel="noreferrer"
-              className="social-icon"
-            >
+            </div>
+            <div className="social-icon">
               <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a
-              href="https://x.com/technovera/"
-              target="_blank"
-              rel="noreferrer"
-              className="social-icon"
-            >
+            </div>
+            <div className="social-icon">
               <FontAwesomeIcon icon={faXTwitter} />
-            </a>
-            <a
-              href="https://www.youtube.com/@technovera/"
-              target="_blank"
-              rel="noreferrer"
-              className="social-icon"
-            >
+            </div>
+            <div className="social-icon">
               <FontAwesomeIcon icon={faYoutube} />
-            </a>
+            </div>
           </div>
 
           <p className="footer-desc">{description}</p>

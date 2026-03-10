@@ -112,8 +112,8 @@ export default function ContactUs() {
                 </div>
                 <div className="info-content">
                   <h3 className="info-label">Email Us</h3>
-                  <p className="info-text">email@technovera.com</p>
-                  <p className="info-text">info@technovera.com</p>
+                  <p className="info-text">email@technoveraservices.com</p>
+                  <p className="info-text">info@technoveraservices.com</p>
                 </div>
               </motion.div>
 
@@ -296,7 +296,7 @@ export default function ContactUs() {
           <div className="map-wrapper">
             <iframe
               title="TechnoVera Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.8670179210576!2d73.8542025749609!3d18.444346082634496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2ebce85204b6d%3A0x9c1259eb826c80fb!2sTechnoVera%20Solutions!5e0!3m2!1sen!2sin!4v1763389841452!5m2!1sen!2sin"
+              src="googlemap.com"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
