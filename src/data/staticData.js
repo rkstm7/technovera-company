@@ -433,66 +433,270 @@ export const staticData = {
     {
       id: 1,
       title: "Full Stack Developer",
-      description: "We are looking for an experienced Full Stack Developer",
-      requirements: "3+ years experience with React and Node.js",
+      description: "We are looking for an experienced Full Stack Developer to build scalable web applications using modern technologies.",
+      requirements: "3+ years experience with React, Node.js, MongoDB. Strong problem-solving skills and team collaboration.",
       location: "Remote",
       type: "Full-time",
+      experience: "3-5 years",
+      salary: "₹8-12 LPA",
       isActive: true
     },
     {
       id: 2,
       title: "UI/UX Designer",
-      description: "Creative designer to join our team",
-      requirements: "2+ years experience with Figma and design systems",
+      description: "Creative designer to join our team and create beautiful, user-friendly interfaces.",
+      requirements: "2+ years experience with Figma, Adobe XD, and design systems. Portfolio required.",
       location: "Hybrid",
       type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹6-10 LPA",
+      isActive: true
+    },
+    {
+      id: 3,
+      title: "React Native Developer",
+      description: "Build cross-platform mobile applications for iOS and Android using React Native.",
+      requirements: "2+ years experience with React Native, Redux, REST APIs. Experience with native modules is a plus.",
+      location: "Remote",
+      type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹7-11 LPA",
+      isActive: true
+    },
+    {
+      id: 4,
+      title: "Backend Developer (Node.js)",
+      description: "Develop robust backend systems and APIs using Node.js, Express, and databases.",
+      requirements: "3+ years experience with Node.js, Express, MongoDB/PostgreSQL. Knowledge of microservices architecture.",
+      location: "Nashik",
+      type: "Full-time",
+      experience: "3-5 years",
+      salary: "₹8-13 LPA",
+      isActive: true
+    },
+    {
+      id: 5,
+      title: "Frontend Developer (React)",
+      description: "Create responsive and interactive user interfaces using React and modern CSS frameworks.",
+      requirements: "2+ years experience with React, JavaScript, HTML5, CSS3, Tailwind CSS. Strong understanding of responsive design.",
+      location: "Remote",
+      type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹6-10 LPA",
+      isActive: true
+    },
+    {
+      id: 6,
+      title: "DevOps Engineer",
+      description: "Manage cloud infrastructure, CI/CD pipelines, and ensure smooth deployment processes.",
+      requirements: "3+ years experience with AWS/GCP, Docker, Kubernetes, Jenkins. Strong Linux and scripting skills.",
+      location: "Hybrid",
+      type: "Full-time",
+      experience: "3-6 years",
+      salary: "₹10-16 LPA",
+      isActive: true
+    },
+    {
+      id: 7,
+      title: "Python Developer",
+      description: "Develop backend applications and data processing systems using Python and Django/Flask.",
+      requirements: "2+ years experience with Python, Django/Flask, REST APIs. Knowledge of data structures and algorithms.",
+      location: "Remote",
+      type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹7-11 LPA",
+      isActive: true
+    },
+    {
+      id: 8,
+      title: "QA Engineer",
+      description: "Ensure software quality through manual and automated testing processes.",
+      requirements: "2+ years experience with manual testing, Selenium, Jest/Cypress. Knowledge of API testing tools like Postman.",
+      location: "Nashik",
+      type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹5-8 LPA",
+      isActive: true
+    },
+    {
+      id: 9,
+      title: "Business Analyst",
+      description: "Bridge the gap between business needs and technical solutions. Gather requirements and create documentation.",
+      requirements: "3+ years experience in business analysis, requirement gathering, documentation. Knowledge of Agile methodologies.",
+      location: "Hybrid",
+      type: "Full-time",
+      experience: "3-5 years",
+      salary: "₹7-12 LPA",
+      isActive: true
+    },
+    {
+      id: 10,
+      title: "Digital Marketing Specialist",
+      description: "Plan and execute digital marketing campaigns across various channels to drive business growth.",
+      requirements: "2+ years experience with SEO, SEM, social media marketing, Google Analytics. Content creation skills required.",
+      location: "Remote",
+      type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹4-7 LPA",
+      isActive: true
+    },
+    {
+      id: 11,
+      title: "Project Manager",
+      description: "Lead software development projects from inception to delivery. Manage teams and stakeholder communication.",
+      requirements: "4+ years experience in project management, Agile/Scrum methodologies. PMP or CSM certification preferred.",
+      location: "Nashik",
+      type: "Full-time",
+      experience: "4-7 years",
+      salary: "₹12-18 LPA",
+      isActive: true
+    },
+    {
+      id: 12,
+      title: "Flutter Developer",
+      description: "Build beautiful cross-platform mobile applications using Flutter and Dart.",
+      requirements: "2+ years experience with Flutter, Dart, Firebase. Experience with state management solutions like Provider/Bloc.",
+      location: "Remote",
+      type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹7-11 LPA",
+      isActive: true
+    },
+    {
+      id: 13,
+      title: "Data Analyst",
+      description: "Analyze business data and create insights to drive decision-making using data visualization tools.",
+      requirements: "2+ years experience with SQL, Python, Excel, Power BI/Tableau. Strong analytical and problem-solving skills.",
+      location: "Hybrid",
+      type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹6-10 LPA",
+      isActive: true
+    },
+    {
+      id: 14,
+      title: "Graphic Designer",
+      description: "Create visual content for digital and print media including logos, brochures, and social media graphics.",
+      requirements: "2+ years experience with Adobe Creative Suite (Photoshop, Illustrator, InDesign). Strong portfolio required.",
+      location: "Nashik",
+      type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹4-7 LPA",
+      isActive: true
+    },
+    {
+      id: 15,
+      title: "Content Writer",
+      description: "Create engaging content for websites, blogs, social media, and marketing materials.",
+      requirements: "2+ years experience in content writing, SEO writing, copywriting. Excellent English communication skills.",
+      location: "Remote",
+      type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹3-6 LPA",
+      isActive: true
+    },
+    {
+      id: 16,
+      title: "Java Developer",
+      description: "Develop enterprise-level applications using Java, Spring Boot, and related technologies.",
+      requirements: "3+ years experience with Java, Spring Boot, Hibernate, MySQL. Knowledge of microservices architecture.",
+      location: "Hybrid",
+      type: "Full-time",
+      experience: "3-5 years",
+      salary: "₹8-13 LPA",
+      isActive: true
+    },
+    {
+      id: 17,
+      title: "WordPress Developer",
+      description: "Build and customize WordPress websites, themes, and plugins for clients.",
+      requirements: "2+ years experience with WordPress, PHP, MySQL, HTML/CSS. Experience with page builders like Elementor.",
+      location: "Remote",
+      type: "Full-time",
+      experience: "2-4 years",
+      salary: "₹5-8 LPA",
+      isActive: true
+    },
+    {
+      id: 18,
+      title: "Intern - Web Development",
+      description: "Learn and work on real-world web development projects. Great opportunity for freshers to start their career.",
+      requirements: "Basic knowledge of HTML, CSS, JavaScript, React. Pursuing or completed degree in Computer Science/IT.",
+      location: "Nashik",
+      type: "Internship",
+      experience: "0-1 years",
+      salary: "₹10-15k/month",
       isActive: true
     }
   ],
 
   technologies: [
-    {
-      id: 1,
-      name: "React",
-      category: "frontend",
-      icon: "/images/tech/react.png",
-      isActive: true
-    },
-    {
-      id: 2,
-      name: "Node.js",
-      category: "backend",
-      icon: "/images/tech/nodejs.png",
-      isActive: true
-    },
-    {
-      id: 3,
-      name: "MongoDB",
-      category: "database",
-      icon: "/images/tech/mongodb.png",
-      isActive: true
-    },
-    {
-      id: 4,
-      name: "AWS",
-      category: "cloud",
-      icon: "/images/tech/aws.png",
-      isActive: true
-    },
-    {
-      id: 5,
-      name: "React Native",
-      category: "mobile",
-      icon: "/images/tech/react-native.png",
-      isActive: true
-    },
-    {
-      id: 6,
-      name: "Docker",
-      category: "devops",
-      icon: "/images/tech/docker.png",
-      isActive: true
-    }
+    // Frontend
+    { id: 1, name: "React", category: "frontend", proficiency: 95, isActive: true },
+    { id: 2, name: "Angular", category: "frontend", proficiency: 85, isActive: true },
+    { id: 3, name: "Vue.js", category: "frontend", proficiency: 80, isActive: true },
+    { id: 4, name: "Next.js", category: "frontend", proficiency: 90, isActive: true },
+    { id: 5, name: "TypeScript", category: "frontend", proficiency: 92, isActive: true },
+    { id: 6, name: "JavaScript", category: "frontend", proficiency: 98, isActive: true },
+    { id: 7, name: "HTML5", category: "frontend", proficiency: 100, isActive: true },
+    { id: 8, name: "CSS3", category: "frontend", proficiency: 95, isActive: true },
+    { id: 9, name: "Tailwind CSS", category: "frontend", proficiency: 90, isActive: true },
+    { id: 10, name: "Bootstrap", category: "frontend", proficiency: 88, isActive: true },
+    { id: 11, name: "Redux", category: "frontend", proficiency: 85, isActive: true },
+    { id: 12, name: "Webpack", category: "frontend", proficiency: 80, isActive: true },
+
+    // Backend
+    { id: 13, name: "Node.js", category: "backend", proficiency: 95, isActive: true },
+    { id: 14, name: "Express", category: "backend", proficiency: 93, isActive: true },
+    { id: 15, name: "Python", category: "backend", proficiency: 88, isActive: true },
+    { id: 16, name: "Django", category: "backend", proficiency: 85, isActive: true },
+    { id: 17, name: "Flask", category: "backend", proficiency: 82, isActive: true },
+    { id: 18, name: "Java", category: "backend", proficiency: 80, isActive: true },
+    { id: 19, name: "Spring Boot", category: "backend", proficiency: 78, isActive: true },
+    { id: 20, name: "PHP", category: "backend", proficiency: 85, isActive: true },
+    { id: 21, name: "Laravel", category: "backend", proficiency: 83, isActive: true },
+    { id: 22, name: "GraphQL", category: "backend", proficiency: 87, isActive: true },
+
+    // Database
+    { id: 23, name: "MongoDB", category: "database", proficiency: 92, isActive: true },
+    { id: 24, name: "MySQL", category: "database", proficiency: 90, isActive: true },
+    { id: 25, name: "PostgreSQL", category: "database", proficiency: 88, isActive: true },
+    { id: 26, name: "Redis", category: "database", proficiency: 85, isActive: true },
+    { id: 27, name: "Firebase", category: "database", proficiency: 87, isActive: true },
+    { id: 28, name: "Elasticsearch", category: "database", proficiency: 80, isActive: true },
+
+    // Cloud
+    { id: 29, name: "AWS", category: "cloud", proficiency: 90, isActive: true },
+    { id: 30, name: "Google Cloud", category: "cloud", proficiency: 85, isActive: true },
+    { id: 32, name: "Vercel", category: "cloud", proficiency: 95, isActive: true },
+    { id: 33, name: "Netlify", category: "cloud", proficiency: 90, isActive: true },
+    { id: 34, name: "Heroku", category: "cloud", proficiency: 88, isActive: true },
+    { id: 35, name: "DigitalOcean", category: "cloud", proficiency: 85, isActive: true },
+
+    // Mobile
+    { id: 36, name: "React Native", category: "mobile", proficiency: 92, isActive: true },
+    { id: 37, name: "Flutter", category: "mobile", proficiency: 88, isActive: true },
+    { id: 38, name: "Android", category: "mobile", proficiency: 85, isActive: true },
+    { id: 39, name: "iOS", category: "mobile", proficiency: 83, isActive: true },
+    { id: 40, name: "Swift", category: "mobile", proficiency: 80, isActive: true },
+    { id: 41, name: "Kotlin", category: "mobile", proficiency: 82, isActive: true },
+
+    // DevOps
+    { id: 42, name: "Docker", category: "devops", proficiency: 90, isActive: true },
+    { id: 43, name: "Kubernetes", category: "devops", proficiency: 85, isActive: true },
+    { id: 44, name: "Jenkins", category: "devops", proficiency: 83, isActive: true },
+    { id: 45, name: "GitHub Actions", category: "devops", proficiency: 88, isActive: true },
+    { id: 46, name: "Git", category: "devops", proficiency: 95, isActive: true },
+    { id: 47, name: "Nginx", category: "devops", proficiency: 87, isActive: true },
+    { id: 48, name: "Linux", category: "devops", proficiency: 90, isActive: true },
+
+    // Other Tools
+    { id: 49, name: "Figma", category: "other", proficiency: 92, isActive: true },
+    { id: 50, name: "WordPress", category: "other", proficiency: 88, isActive: true },
+    { id: 51, name: "Shopify", category: "other", proficiency: 85, isActive: true },
+    { id: 52, name: "Postman", category: "other", proficiency: 90, isActive: true },
+    { id: 53, name: "VS Code", category: "other", proficiency: 95, isActive: true },
+    { id: 54, name: "Jira", category: "other", proficiency: 87, isActive: true },
   ],
 
   team: [

@@ -212,6 +212,33 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.tech-card-icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover .tech-card-icon-wrapper {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tech-icon-colored {
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover .tech-icon-colored {
+  transform: scale(1.1);
+}
+
 .tech-name {
   font-size: 1.125rem;
   font-weight: 600;
