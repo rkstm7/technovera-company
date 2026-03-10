@@ -7,6 +7,18 @@
     <!-- Mobile viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google tag (gtag.js) - Must be early in head for accurate tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JKJ5F79PZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1JKJ5F79PZ');
+    </script>
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+
     <!-- Theme color (Chrome Mobile SEO) -->
     <meta name="theme-color" content="#6366f1" />
     <meta name="msapplication-TileColor" content="#6366f1" />
@@ -306,14 +318,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    
-    <!-- Google Analytics (Add your tracking ID) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script> -->
   </body>
 </html>
