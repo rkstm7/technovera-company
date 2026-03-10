@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - TechnoVera</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .debug-info { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .error { background: #ffebee; border-left: 4px solid #f44336; }
+        .success { background: #e8f5e9; border-left: 4px solid #4caf50; }
+    </style>
+</head>
+<body>
+    <h1>TechnoVera Debug Page</h1>
+    <div id="debug-output"></div>
+    
+    <script>
+        const debugOutput = document.getElementById('debug-output');
+        
+        function addDebugInfo(title, content, type = 'info') {
+            const div = document.createElement('div');
+            div.className = `debug-info ${type}`;
+            div.innerHTML = `<h3>${title}</h3><pre>${content}</pre>`;
+            debugOutput.appendChild(div);
+        }
+        
+        // Check if main app files exist
+        addDebugInfo('Current URL', window.location.href);
+        addDebugInfo('User Agent', navigator.userAgent);
+        
+        // Test if main JS files load
+        const testScript = document.createElement('script');
+        testScript.src = '/assets/index-C3-apLxq.js';
+        testScript.onload = () => addDebugInfo('Main JS File', 'Loaded successfully', 'success');
+        testScript.onerror = () => addDebugInfo('Main JS File', 'Failed to load', 'error');
+        document.head.appendChild(testScript);
+        
+        // Test if CSS loads
+        const testCSS = document.createElement('link');
+        testCSS.rel = 'stylesheet';
+        testCSS.href = '/assets/index-DP-OwmFh.css';
+        testCSS.onload = () => addDebugInfo('Main CSS File', 'Loaded successfully', 'success');
+        testCSS.onerror = () => addDebugInfo('Main CSS File', 'Failed to load', 'error');
+        document.head.appendChild(testCSS);
+        
+        // Check console errors
+        window.addEventListener('error', (e) => {
+            addDebugInfo('JavaScript Error', `${e.message}\nFile: ${e.filename}\nLine: ${e.lineno}`, 'error');
+        });
+        
+        // Check if React is available
+        setTimeout(() => {
+            if (typeof React !== 'undefined') {
+                addDebugInfo('React', 'Available', 'success');
+            } else {
+                addDebugInfo('React', 'Not available', 'error');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
