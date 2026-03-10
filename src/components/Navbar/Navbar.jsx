@@ -4,6 +4,8 @@ import { publicNav } from "../../_nav";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { Menu, X } from "lucide-react";
 import "./Navbar.css";
+import logo1 from "../../assets/images/logo1.jpg";
+import techLogo from "../../assets/images/TechLogo2.jpg";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
